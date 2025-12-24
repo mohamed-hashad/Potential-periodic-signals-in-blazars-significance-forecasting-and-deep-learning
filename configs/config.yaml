@@ -1,0 +1,65 @@
+seed_everything: 42
+
+trainer:
+  max_epochs: 100
+  accelerator: "gpu"
+  devices: [0]
+  precision: "32-true"
+
+  callbacks:
+    - class_path: lightning.pytorch.callbacks.ModelCheckpoint
+      init_args:
+        save_weights_only: false
+        mode: "min"
+        monitor: "val_loss"
+        every_n_train_steps: 0
+        every_n_epochs: 1
+        train_time_interval: null
+
+    - class_path: lightning.pytorch.callbacks.EarlyStopping
+      init_args:
+        monitor: "val_loss"
+        min_delta: 0.0
+        patience: 5
+        verbose: false
+
+  logger:
+    - class_path: lightning.pytorch.loggers.TensorBoardLogger
+      init_args:
+        save_dir: "."
+        name: "logs"
+
+model:
+  class_path: models.models.TransformerForecaster
+  init_args:
+    input_dim: 5
+    context_len: 96
+    horizon: 48
+    embed_dim: 256
+    num_heads: 8
+    num_enc_layers: 4
+    dropout: 0.1
+    decompose: True
+    batch_size: 64
+    lr: 5e-6
+
+data:
+  class_path: data.data_handling.WindowForecastingDataModule
+  init_args:
+    series: "S50716+714.csv"
+    context_len: 96
+    horizon: 48
+    batch_size: 64
+    num_workers: 8
+    val_split: 0.1
+
+optimizer:
+  class_path: torch.optim.AdamW
+  init_args:
+    lr: 5e-6
+
+lr_scheduler:
+  class_path: torch.optim.lr_scheduler.StepLR
+  init_args:
+    step_size: 20
+    gamma: 0.9
