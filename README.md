@@ -1,5 +1,5 @@
 # Potential-periodic-signals-in-blazars-significance-forecasting-and-deep-learning
-## Authors: $$\textcolor{blue}{\text{Mohamed Hashad, Amr El-Zant and Ahmed Hammad}}$$ 
+## Authors: $$\textcolor{blue}{\text{Mohamed Hashad, Ahmed Hammad and Amr El-Zant}}$$ 
 
 <img width="1205" height="666" alt="Screenshot 2025-10-01 at 5 07 23 PM" src="https://github.com/user-attachments/assets/1c058b25-e7d9-488f-b276-2267e2a6199a" />
 
