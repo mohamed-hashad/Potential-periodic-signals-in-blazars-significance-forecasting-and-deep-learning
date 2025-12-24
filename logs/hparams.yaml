@@ -1,0 +1,15 @@
+input_dim: 5
+context_len: 96
+horizon: 48
+embed_dim: 256
+num_heads: 8
+num_enc_layers: 4
+dropout: 0.1
+batch_size: 64
+lr: 5.0e-06
+decompose: true
+kernel_size: 25
+_instantiator: lightning.pytorch.cli.instantiate_module
+series: S50716+714.csv
+num_workers: 24
+val_split: 0.1
