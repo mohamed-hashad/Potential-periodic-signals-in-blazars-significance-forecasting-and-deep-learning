@@ -46,7 +46,7 @@ For detrending and forecasting blazars' time series
 
 A: Statistical Learning
 
-Use this NoteBook 'STLForecaster.ipynp'.
+Use this NoteBook 'STLForecaster_Blazars_LC_parGrid.ipynb'.
 
 B: Deep Learning
 
