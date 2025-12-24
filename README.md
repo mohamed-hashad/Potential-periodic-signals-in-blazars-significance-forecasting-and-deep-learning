@@ -42,12 +42,14 @@ conda activate Blazars_Forecasting
 
 ##  Get started
 
-FTLForecaster
-FTLForecaster NoteBook: FTLForecaster.ipynp
+For detrending and forecasting blazars' time series 
+A: Statistical Learning
+use this NoteBook 'STLForecaster.ipynp'.
 
+B: Deep Learning
 To traint the Transformer network.
 ```bash
-python main.py fit --config config/config.yaml
+python main.py fit --config configs/config.yaml
 ```
 
 For testing the network one need to retore the weigths and the configuration file from the best epoch results as 
