@@ -43,8 +43,9 @@ conda activate Blazars_Forecasting
 ##  Get started
 
 For detrending and forecasting blazars' time series 
+
 A: Statistical Learning
-use this NoteBook 'STLForecaster.ipynp'.
+Use this NoteBook 'STLForecaster.ipynp'.
 
 B: Deep Learning
 To traint the Transformer network.
