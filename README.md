@@ -29,11 +29,11 @@ If you do not have Miniconda or Anaconda installed, download and install it from
 
 Create a Conda environment using the following command in your terminal:
 
-This project relies on several dependencies, including libraries such as NumPy, Pandas, Matplotlib, tqdm, h5py, scikit-learn, PyTorch, PyTorch Geometric, PyTorch Lightning, and Torchmetrics, so install all of these dependencies.
-
 ```bash
 conda create -n Blazars_Forecasting python=3.11
 ```
+
+This project relies on several dependencies, including libraries such as NumPy, Pandas, Matplotlib, tqdm, h5py, scikit-learn, PyTorch, PyTorch Geometric, PyTorch Lightning, and Torchmetrics, so install all of these dependencies.
 
 ### Step 4: Activate the Environment
 ```bash
